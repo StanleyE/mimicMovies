@@ -1,0 +1,46 @@
+body {
+  background-color: lightgray;
+  font-family: "Expletus Sans", cursive; }
+
+.jumbotron {
+  background-color: black;
+  color: #00c705; }
+  .jumbotron h1 {
+    text-shadow: 1px 2px 3px lightgray; }
+
+.title {
+  margin: 2rem; }
+
+.movieBox {
+  background-color: white; }
+
+.shadow {
+  box-shadow: 2px 3px 4px slategray; }
+
+.shadow:hover {
+  box-shadow: 3px 4px 5px #00c705; }
+
+.container {
+  margin-bottom: 3rem; }
+
+.align--centre {
+  text-align: center; }
+
+.padx3 {
+  padding: 3rem; }
+
+.padx5 {
+  padding: 5rem; }
+
+.bottom {
+  border-bottom: 3px solid black; }
+
+.width {
+  width: 50%;
+  margin: 3em auto; }
+
+.emoj {
+  margin: 0 2rem; }
+
+.emoj:hover {
+  color: #00c705; }

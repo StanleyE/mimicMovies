@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>  
+    <!-- BootStrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Expletus+Sans:400,500,600,700,700i" rel="stylesheet">
+    <!-- CSS Style -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Jumbotron Header -->
+    <div class= 'jumbotron padx5'>
+    <h1>Mimic Movies  <i class="far fa-play-circle"></i></h1>
+    <h2>The Movies Data Base Duplicate</h2>
+    </div>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-light bg-light justify-content-between">
+            <a class="navbar-brand" href="http://localhost:8080/">Mimic Movies</a>
+            <form class="form-inline" action = "/search" method="GET">
+              <input class="form-control mr-sm-2" type="search" name = "MovieSearch" placeholder="Search Movies" aria-label="Search movies"/>
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </nav>
+    
+<h2 class = "title">Popular Tonight</h2>
+
+<!-- Movies -->
+    <div class = "container">
+            <!-- for loop to work through the array of movies -->
+            <% for(let i = 0; i < movies.length; i++){ %>
+                <div class = 'row movieBox media shadow'>
+                    <!-- movie poster -->
+                    <div class = "col-6 media-left">
+                        <a href= "/movies/<%= movies[i].movieID%>" >
+                            <img class = 'shadow' src=" <%= movies[i].img %> " alt="Movie Poster">
+                            </a>
+                    </div> 
+                    <!-- movie title -->
+                    <div class = 'media-body'>
+                        <div class = "col-6 media-header">
+                               <strong> <h3> <%= movies[i].title %> </h3></strong>
+                                <br>
+                                <%= movies[i].released %>                   
+                        </div>
+                        <!-- movie plot -->
+                        <div class = "col-6">
+                               <h4> <%= movies[i].plot %> </h4>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+   </div>
+
+</body>
+</html>

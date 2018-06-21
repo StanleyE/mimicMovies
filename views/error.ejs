@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mimic Movies Error</title>
+     <!-- BootStrap CDN -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-- FontAwesome CDN -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+     <!-- Google Font -->
+     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+     <!-- CSS Style -->
+     <link rel="stylesheet" href="/movieTemp.css">
+</head>
+<body>
+    <div class = "jumbotron padx5">
+        <h1>Mimic Movies  <i class="far fa-play-circle"></i></h1>
+        <h2>Result</h2>
+    </div>
+
+  <!-- NavBar -->
+  <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" href="http://localhost:8080/">Mimic Movies</a>
+        <form class="form-inline" action = "/search" method="GET">
+          <input class="form-control mr-sm-2" type="search" name = "MovieSearch" placeholder="What're you gonna watch?" aria-label="Search movies"/>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+  </nav>
+
+  <div class = "container padx5 backBoard">
+        <h2>Hey! Listen!</h2>
+        <a href="http://zelda.wikia.com/wiki/Navi"><img src="https://vignette.wikia.nocookie.net/zelda/images/2/2c/Navi_Artwork.png/revision/latest?cb=20090319134157" alt="Navi"></a>
+    <h3>Your Search Came Up Empty,</h3>
+    <h4>Please check the spelling and try again but this time try a broader search (ie. "Rocky")</h4>
+  </div>
+
+    
+</body>
+</html>
